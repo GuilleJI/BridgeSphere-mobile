@@ -28,9 +28,19 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
       <Stack>
+        {/* 
+          Stack Navigation:
+          All screens below have their headers disabled to allow for full custom UI control.
+          This is especially important during onboarding and login, where headers may clutter the design.
+        */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="login" options={{ headerShown: false}}/>
+        <Stack.Screen name="role-selection" options={{ headerShown: false}}/>
+        <Stack.Screen name="client-onboarding" options={{ headerShown: false }}/> 
+        <Stack.Screen name="agent-onboarding" options={{ headerShown: false}}/> 
+        <Stack.Screen name="brokerage-onboarding" options ={{ headerShown: false}}/>  
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
