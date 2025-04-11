@@ -36,11 +36,11 @@ export default function RootLayout() {
           This is especially important during onboarding and login, where headers may clutter the design.
         */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="login" options={{ headerShown: false}}/>
-        <Stack.Screen name="role-selection" options={{ headerShown: false}}/>
-        <Stack.Screen name="client-onboarding" options={{ headerShown: false }}/> 
-        <Stack.Screen name="agent-onboarding" options={{ headerShown: false}}/> 
-        <Stack.Screen name="brokerage-onboarding" options ={{ headerShown: false}}/>  
+        <Stack.Screen name="login" options={{ headerShown: true}}/>
+        <Stack.Screen name="role-selection" options={{ headerShown: true}}/>
+        <Stack.Screen name="client-onboarding" options={{ headerShown: true }}/> 
+        <Stack.Screen name="agent-onboarding" options={{ headerShown: true}}/> 
+        <Stack.Screen name="brokerage-onboarding" options ={{ headerShown: true}}/>  
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
