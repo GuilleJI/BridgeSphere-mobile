@@ -11,8 +11,8 @@ export default function Login(){
                 <h4>Please Login Here</h4>
             </Text>
             
-            <Text>[Placeholder: Email Address Input]</Text>
-            <Text>[Placeholder: Password ]</Text>
+            <Text>[Email Address Input]</Text>
+            <Text>[Password ]</Text>
             <Button title='Login' onPress={() => router.push('/onboarding/role-selection')}></Button> {/* Login button: navigates to the role selection page on press */}
         </View>
         
