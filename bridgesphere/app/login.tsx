@@ -4,7 +4,6 @@ import { router } from 'expo-router';
 export default function Login(){
     return(
         <View>
-            <h1>login page</h1>
             <Text>
                 <h2>BridgeSphere</h2>
                 <h2>Welcome</h2>
@@ -12,7 +11,7 @@ export default function Login(){
             </Text>
             
             <Text>[Email Address Input]</Text>
-            <Text>[Password ]</Text>
+            <Text>[Password ]</Text><br/>
             <Button title='Login' onPress={() => router.push('/onboarding/role-selection')}></Button> {/* Login button: navigates to the role selection page on press */}
         </View>
         
