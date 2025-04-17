@@ -1,209 +1,238 @@
-import { View, Text, Button, ScrollView} from 'react-native'; 
+import { View, Text, Button, ScrollView, StyleSheet, TextInput} from 'react-native'; 
 import { router } from 'expo-router';
+
 
 export default function AgentOnboarding(){
     return(
         <ScrollView>
-            <View>
-                <Text>
-                    <h2>Build Your Professional Profile</h2>
-                    <h4>Showcase your expertise and connect with high-value clients</h4>
-                </Text>
-                <Text>
-                    <h3>**[Upload an Introduction Video]**</h3>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Agent Full Name + Upload Photo]**</h3>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Basic Information]**</h3>
-                    <h6>Email (Free Text)</h6>
-                    <h6>Phone Number (Free Text)</h6>
-                    <h6>Address(Free Text)</h6>
-                    <h6>Licensed Since(Calendar with Month and Year)</h6>
-                    <h6>Agent ID (Free Text)</h6>
-                    <h6>Brokerage (Free Text)</h6>
-                    <h6>Language Proficiency (Free Text)</h6>
-                    <h6>Website (Free Text)</h6>
-                    <h6>Social (Links)</h6>
-                    <h6>Gender (Drop Down Menu)</h6>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Professional Information]**</h3>
-                    <h4>Specialized Area- </h4>
-                    <h6>Province: ON</h6>
-                    <h6>Neighborhood Code</h6>
-                    <h6>City (Drop Down Menu)</h6>
-                    <h6>Neighborhood (Drop Down Menu)</h6>
-                    <br/>
+            {/* Section 1: Upload Video */}
+            <Text style={styles.sectionTitle}><h3>1. Upload Video</h3></Text> 
+            <TextInput placeholder="Upload Video"/>{/* Uploading video functionality needed */}
+            <br/>
+            {/* Section 2: Profile */}
+            <Text style={styles.sectionTitle}><h3>2. Profile</h3></Text>
+            <TextInput placeholder="Agent Full Name"/>{/* Text input  */}
+            <Text>[Upload Photo Placeholder]</Text>{/* Uploading photo functionality needed */}
+            <br/>
+            {/* Section 3: Basic Information */}
+            <Text style={styles.sectionTitle}><h3>3. Basic Information</h3></Text>
+            <TextInput placeholder="Email"/>{/* Free text input */}
+            <TextInput placeholder="Phone Number"/>{/* Free text input */}
+            <TextInput placeholder="Address"/>{/* Free text input */}
+            <TextInput placeholder="Licensed Since"/>{/* Calendar with Month and Year */}
+            <TextInput placeholder="Agent ID"/>{/* Free text input */}
+            <TextInput placeholder="Brokerage"/> {/* Free text input */}
+            <TextInput placeholder="Language Proficiency"/>{/* Free text input */}
+            <TextInput placeholder="Website"/> {/* Free text input */}
+            <TextInput placeholder="Social"/> {/* Links */}
+            <TextInput placeholder="Gender"/> {/* Drop Down Menu */}
+            <br/>
+            {/* Section 4: Professional Information */}
+            <Text style={styles.sectionTitle}><h3>4. Professional Information</h3></Text>
+            <Text><h5> - [Placeholder: Specialized Area]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Specialized Area for future development 
+                - Province : ON (set in stone due to being available in Ontario)
+                - Neighbothood Code: Input text 
+                - City : Drop Down Menu
+                - Neighborhood : Drop Down Menu
+            */}
 
-                    <h4>Expertise Type-</h4>
-                    <h6>Rent</h6>
-                    <h6>Invest</h6>
-                    <h6>Buy</h6>
-                    <h6>Sell</h6>
-                    <br/>
+            <Text><h5> - [Placeholder: Expertise Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Expertise Type (Selection button or Checklist?? Better ask Milad)
+                - Rent
+                - Invest 
+                - Buy 
+                - Sell 
+            */}
 
-                    <h4>Specific Property Type-</h4>
-                    <h6>Residential</h6>
-                    <h6>Commercial</h6>
-                    <h6>Industrial</h6>
-                    <h6>Agriculture</h6>
-                    <h6>Mixed Use</h6>
-                    <br/>
+            <Text><h5> - [Placeholder: Specific Property Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Specific Property Type (Selection button or Checklist?? Better ask Milad)
+                - Residential
+                - Commercial 
+                - Industrial
+                - Agriculture
+                - Mixed Use
+            */}
 
-                    <h4>Property Type-</h4>
-                    <h6>Condos</h6>
-                    <h6>Detached</h6>
-                    <h6>Semi-Detached</h6>
-                    <h6>Town House</h6>
-                    <h6>Pre-Construction</h6>
-                    <br/>
+            <Text><h5> - [Placeholder: Property Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Property Type (Selection button or Checklist?? Better ask Milad)
+                - Condos
+                - Detached
+                - Semi-Detached
+                - Town House
+                - Pre-Construction
+            */}
 
-                    <h4>Specific Sector Type-</h4>
-                    <h6>Investment Properties</h6>
-                    <h6>Luxury Properties</h6>
-                    <h6>Foreclosure</h6>
-                    <br/>
+            <Text><h5> - [Placeholder: Specific Sector Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Specific Sector Type (Selection button or Checklist?? Better ask Milad)
+                - Investment Properties
+                - Luxury Properties
+                - Foreclosure
+            */}
 
-                    <h4>Client Type</h4>
-                    <h6>First Time Home Buyer</h6>
-                    <h6>Luxury Buyer/Seller</h6>
-                    <h6>Investor</h6>
-                    <h6>Business Owners</h6>
-                    <br/>
+            <Text><h5> - [Placeholder: Client Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Client Type (Selection button or Checklist or ?? Better ask Milad)
+                - First Time Home Buyer
+                - Luxury Buyer/Seller
+                - Investor 
+                - Business Owners
+            */}
 
-                    <h4>Degree & Certifications-</h4>
-                    <h6>Highest Degree:</h6>
-                    <h6>Certifications:</h6>
-                    <h6>Field of Study:</h6>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Agent Transaction History]**</h3>
-                    <h6>Minimum Property Price (Free Text)</h6>
-                    <h6>Annual Sales $ (Drop Down Menu with Rangers)</h6>
-                    <h6>Annual Sales Volume (Free Text)</h6>
-                    <h6>Awards (Free Text)</h6>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Describe Your Story and Expertise](Multi-line Free Text)**</h3>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Agent Listings + Upload Photo]**</h3>
-                    <h4>Listing Price (Free Text)</h4>
-                    <h6>Listing Address (input fields for Beds, Baths. and sqft)</h6>
-                    <h5>[Sale or Rent Button]</h5>
-                    <h5>[ + add card, meaning a new Agent Listing Field ]</h5>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Choose the Right Plan to Boost Your Real Estate Career ( 3 Membership plans)]**</h3>
-                    <h4>Elevate your visibility, generate high-quality leads, and access advanced tools with our tailored subscription options.</h4>
-                    <h5>Basic Plan Card</h5>
-                    <h5>Professional Plan Card</h5>
-                    <h5>Elite Plan Card</h5>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[My Ideal Brokerage]**</h3>
-                
-                    <h4>Brokerage Program-</h4>
-                    <h6>New Agent Mentorship</h6>
-                    <h6>Team-Based Programs</h6>
-                    <h6>Solo Agent Support</h6>
-                    <h6>Luxury Real Estate Program</h6>
-                    <h6>Commercial Real Estate Program</h6>
-                    <h6>Investment & Rental Specialization</h6>
-                    <h6>Franchise Model Support</h6>
-                    <h6>Virtual Brokerage Model</h6>
-                    <br/>
+            <Text><h5> - [Placeholder: Degree & Certifications]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Degree & Certifications
+                - Highest Degree (Text Input)
+                - Field of Study (Text Input)
+                - Certifications (Text Input)
+            */}
 
-                    <h4>Business Model-</h4>
-                    <h6>Traditional Brick-and-Mortar</h6>
-                    <h6>Virtual Brokerage</h6>
-                    <h6>Hybrid(In-Person & Virtual)</h6>
-                    <h6>Team-Based Structure</h6>
-                    <h6>Franchise-Based</h6>
-                    <h6>Independent Boutique Brokerage</h6>
-                    <br/>
+            <br/>
+            {/* Section 5: Agent Transaction History */}
+            <Text style={styles.sectionTitle}><h3>5. Agent Transaction History</h3></Text> 
+            <TextInput placeholder="Minimum Property Price"/> {/* Free Text */}
+            <TextInput placeholder="Annual Sales $"/> {/* Drop Down Menu with Rangers */}
+            <TextInput placeholder="Annual Sales Volume"/> {/* Free Text */} 
+            <TextInput placeholder="Awards"/> {/* Free Text */}
+            <br/>
+            {/* Section 6: Describe your Story and Expertise */}
+            <Text style={styles.sectionTitle}><h3>6. Describe Your Story and Expertise</h3></Text>
+            <TextInput placeholder='[multiline input goes here]'/>
+            <br/>
+            {/* Section 7: Agent Listings*/}
+            <Text style={styles.sectionTitle}><h3>7. Agent Listings</h3></Text>
+            <Text>[placeholder: Upload Photo]</Text> {/* Uploading photo functionality needed */}
+            <TextInput placeholder="Listing Price"/> {/* Text Input */}
+            <TextInput placeholder="Listing Adress"/>{/* Text Input */}
+            <TextInput placeholder="# Beds"/>{/* Text Input */}
+            <TextInput placeholder="# Bath"/>{/* Text Input */}
+            <TextInput placeholder="# sqft"/> {/* Text Input */}
+            <Text>[Placeholder: Sale or Rent button]</Text>
+            <Text>[placeholder: Add button]</Text> {/* Add new Card with the content above functionality*/}
+            <br/>
+            {/* Section 8: Plans */}
+            <Text style={styles.sectionTitle}>
+                <h3>8. Choose the Right Plan to Boost Your Real Estate Career</h3>
+                <h4>Elevate your visibility, generate high-quality leads, and access advanced tools with our tailored subscription options</h4>
+            </Text>
+            {/* TODO: Each card should have the perks per each plan, followed by a selection button which ideally would activate the plan during onboarding process */}
+            <Text>[Basic Plan]</Text> 
+            <Text>[Professional Plan] </Text>
+            <Text>[Elite Plan]</Text>
+            {/* TODO: Button functionality seems to be to edit out a chosen plan */}
+            <Text>[ Edit Subscription Button ]</Text>
+            <br/>
+            {/* Section 8 : My Ideal Brokerage */}
+            <Text style={styles.sectionTitle}><h3>9. My Ideal Brokerage</h3></Text>
+            <Text><h5> - [Placeholder: Brokerage program]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Brokerage program (Button/Radio button/Checklist??)
+                - New Agent Mentorship
+                - Team-Based Programs
+                - Solo Agent Support
+                - Luxury Real Estate Program
+                - Commercial Real Estate Program 
+                - Investment & Rental Specialization
+                - Franchise Model Support
+                - Virtual Brokerage Model
+            */}
+            <Text><h5> - [Placeholder: Business Model]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Business Model (Button/Radio button/Checklist??)
+                - Traditional Brick-and-Mortar
+                - Virtual Brokerage
+                - Hybrid (In-Person & Virtual)
+                - Team-Based Structure
+                - Franchise-Based
+                - Independent Boutique Brokerage
+            */}
+            <Text><h5> - [Placeholder: Key Services Offered]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Key Services Offered (Button/Radio button/Checklist??)
+                - MLS Access & Listinf Support 
+                - Lead Generator & CRM Tools
+                - Contract & Transaction Management 
+                - ?????????? [Unclear]
+            
+            */}
+            <Text><h5> - [Placeholder: ??? ]</h5></Text>
+            {/*
+                TODO: This will serve the contents under ???? [Unclear] (Button/Radio button/Checklist??)
+                - Weekly Coaching & Webinars
+                - One-on-One Mentorship
+                - In-Person Training Workshops
+                - Online Learning Portal
+                - Advanced Sales & Negotiation Training 
+                - AI & Digital Marketing Training 
+                - Networking & Industry Events
+            */}
+            <Text><h5> - [Placeholder: Referral Programs]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Referral Programs (Button/Radio button)
+                - Yes, Commission-Based Referral Program
+                - Yes, Flat-Rate Bonus for Referrals
+                - Yes, Tiered Incentive Program
+                - No, We Do Not Offer Referral Programs
+            
+            */}
+            <Text><h5> - [Placeholder: Commission Structure]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Commission Structure (Button/Radio button/Checklist??)
+                - 100% Commission (Flat Monthly Fee)
+                - Tiered Split (Based on Sales Volume)
+                - Fixed Percentage Split (e.g., 80/20, 70/30)
+                - Salary + Commission Model 
+                - Revenue Share Model
+                - Custom Negotiable Structure 
+             */}
+            <Text><h5> - [Placeholder: Marketing Channels]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Marketing Channels (Button/Radio button/Checklist??)
+                - Paid Digital Advertising (Google, Facebook, Instagram)
+                - Social Media Content & Strategy
+                - Email Marketing Campaigns 
+                - Print & Traditional Advertising 
+                - SEO & Website Lead Generation 
+                - Custom Branding & Design Support 
+                - Personal Agent Website Creation 
+            */}
+            <Text><h5> - [Placeholder: Recruitment Preferences]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Recruitment Preferences (Button/Radio button/Checklist??)
+                - New Agents (0-1 Years Experience)
+                - Experience Agents (2+ Years Experience)
+                - High-Performing Top Producers
+                - Team Leaders & Managing Brokers
+                - Luxury & High-Net-Worth Specialists
+                - Commercial Real Estate Experts
+                - Niche Market Specialists (e.g., investment, relocation, rentals)
+            */}
+            <Text><h5> - [Placeholder: Recruitment Preferences?? (typo?)]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Recruitment Preferences (pressumed typo) (Button/Radio button/Checklist??)
+                - No Desk Fee
+                - Flat Monthly Fee (e.g., $X per month)
+                - Pay-Per-Transaction Fee
+                - Percentage-Based Desk Fee (e.g., % of commission)
+                - Hybrid Model (Combination of Monthly & Transaction Fees)
+                - Negotiable Desk Fee
+            */}
+            <br/>
+            {/* Render Edit Profile */}
+            <Button title ="Edit Profile"/>
+            {/* Render Save button; on press, routes to the user profile as an agent */}
+            <Button title="Save Changes" onPress={()=> router.push('/(tabs)')}/>
+        </ScrollView>     
+    );
+};
 
-                    <h4>Key Services Offered-</h4>
-                    <h6>MLS Access & Listing Support</h6>
-                    <h6>Lead Generation & CRM Tools</h6>
-                    <h6>Contract & Transaction Management</h6>
-                    <h6>In House Local & Compliance Assistance</h6>
-                    <h6>????</h6>
-                    <h6>????</h6>
-                    <br/>
+const styles = StyleSheet.create ({
+    sectionTitle:{
 
-                    <h4>??? (Overlapped element - not readable)</h4>
-                    <h6>Weekly Coaching & Webinars</h6>
-                    <h6>One-on-One Mentorship</h6>
-                    <h6>In-Person Training Workshops</h6>
-                    <h6>Online Learning Portal</h6>
-                    <h6>Advanced Sales & Negotiation Training</h6>
-                    <h6>AI & Digital Marketing Training</h6>
-                    <h6>Networking & Industry Events</h6>
-                    <br/>
-
-                    <h4>Referral Programs-</h4>
-                    <h6>Yes, Commision-Based Referral Program</h6>
-                    <h6>Yes, Flat-Rate Bonus for Referrals</h6>
-                    <h6>Yes, Tiered Incentive Program</h6>
-                    <h6>No, We Do Not Offer Referral Programs</h6>
-                    <br/>
-
-                    <h4>Commission Structure-</h4>
-                    <h6>100% Comission (Flat Monthly Fee)</h6>
-                    <h6>Tiered Split (Based on Sales Volume)</h6>
-                    <h6>Fixed Percentage Split (e.g., 80/20, 70/30)</h6>
-                    <h6>Salary + Commission Model</h6>
-                    <h6>Revenue Share Model</h6>
-                    <h6>Custom Negotiable Structure</h6>
-                    <br/>
-
-                    <h4>Marketing Channels-</h4>
-                    <h6>Paid Digital Advertising (Google, Facebook, Instagram)</h6>
-                    <h6>Social Media Content & Strategy</h6>
-                    <h6>Email Marketing Campaigns</h6>
-                    <h6>Print & Traditional Advertising</h6>
-                    <h6>SEO & Website Lead Generation</h6>
-                    <h6>Custom Branding & Design Support</h6>
-                    <h6>Personal Agent Website Creation</h6>
-                    <br/>
-
-                    <h4>Recruitment Preferences-</h4>
-                    <h6>New Agents (0-1 Years Experience)</h6>
-                    <h6>Experienced Agents (2+ Years Experience)</h6>
-                    <h6>High-Performing Top Producers</h6>
-                    <h6>Team Leaders & Managing Brokers</h6>
-                    <h6>Luxury & High-Net-Worth Specialists</h6>
-                    <h6>Commercial Real Estate Experts</h6>
-                    <h6>Niche Market Specialists (e.g., Investment, relocation, rentals)</h6>
-                    <br/>
-
-                    <h4>Recruitment Preferences (repetition perhaps a typo)</h4>
-                    <h6>No Desk Fee</h6>
-                    <h6>Flat Monthly Fee (e.g., $X per month)</h6>
-                    <h6>Pay-Per-Transaction Fee</h6>
-                    <h6>Percentage-Based Desk Fee (e.g., % of commission)</h6>
-                    <h6>Hybrid Model (Combination of Monthly & Transaction Fees)</h6>
-                    <h6>Negotiable Desk Fee</h6>
-
-                    
-
-                </Text>
-                <br/>
-                {/* Render Save button; on press, routes to the user profile as an agent */}
-                <Button title="Save Changes" onPress={()=> router.push('/(tabs)')}/>
-            </View>
-        </ScrollView>
-        
-    )
-}
+    }
+});

@@ -1,87 +1,108 @@
-import { View, Text, Button, ScrollView } from 'react-native'; 
+import { View, Text, Button, ScrollView, StyleSheet, TextInput } from 'react-native'; 
 import { router } from 'expo-router';
 
 export default function ClientOnboarding(){
     return(
         <ScrollView>
-            <View>
-                <Text>
-                    <h2>Build Your Profile to Find the Right Agent</h2>
-                    <h4>Tell us your preferences to connect with agents who fit your needs</h4>
-                </Text>
-                <Text>
-                    <h3>**[Client Full Name and Upload Photo]</h3>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[Basic Information]</h3>
-                    <h6>Email (Free Text)</h6>
-                    <h6>Phone Number (Free Text)</h6>
-                    <h6>Address (Free Text)</h6>
-                    <h6>Language Proficiency (Drop Down Menu)</h6>
-                </Text>
-                <br/>
-                <Text>
-                    <h3>**[My Ideal Agent]</h3>
-                    <h4>Basic Information</h4>
-                    <h6>Gender (Drop Down Menu)</h6>
-                    <h6>Availability (Drop Down Menu)</h6>
-                    <h6>Brokerage (Drop Down Menu)</h6>
-                    <h6>Language Proficiency (Drop Down Menu)</h6><br/>
+            {/* Section 1: Profile */}
+            <Text style={styles.sectionTitle}><h3>Profile</h3></Text>
+            <TextInput placeholder="Client Full Name"/>
+            <Text>[Upload Photo Placeholder]</Text>
+            <br/>
+            {/* Section 2: Basic Info */}
+            <Text style={styles.sectionTitle}><h3>Basic Information</h3></Text>
+            <TextInput placeholder="Email"/>{/* Free Text */}
+            <TextInput placeholder="Phone Number"/>{/* Free Text*/}
+            <TextInput placeholder="Address"/>{/* Free Text */}
+            <TextInput placeholder="Language Proficiency"/>{/* Drop Down Menu */}
+            <br/>
+            {/* Section 3: My Ideal Agent */}
+            <Text style={styles.sectionTitle}><h3>My ideal Agent</h3></Text>
+            <Text><h5> - [Placeholder: Basic Information]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Basic Information  
+                - Gender : Drop Down Menu
+                - Availability: Drop Down Menu
+                - Brokerage: Drop Down Menu
+                - Language Proficiency: Drop Down Menu
+            */}
 
-                    <h4>Degree & Certification</h4>
-                    <h6>Highest Degree (Drop Down Menu)</h6>
-                    <h6>Certifications (Drop Down Menu)</h6>
-                    <h6>Field of Study (Drop Down Menu)</h6>
-                    <h6>Gender (Drop Down Menu)</h6><br/>
-
-                    <h4>Specialized Area</h4>
-                    <h6>Province (Drop Down Menu)</h6>
-                    <h6>Neighborhood Code (Drop Down Menu)</h6>
-                    <h6>City (Drop Down Menu)</h6>
-                    <h6>Neighborhood (Drop Down Menu)</h6><br/>
-
-                    <h4>Agent Transaction History</h4>
-                    <h6>Minimum Property Price (Free Text)</h6>
-                    <h6>Annual Sales $ (Drop Down Menu with Rangers)</h6>
-                    <h6>Annual Sales Volume (Free Text)</h6>
-                    <h6>Awards (Free Text)</h6><br/>
-
-                    <h4>Expertise Type (Checkbox?)</h4>
-                    <h6>Invest</h6>
-                    <h6>Buy</h6>
-                    <h6>Sell</h6>
-                    <h6>Rent</h6><br/>
-
-                    <h4>Specific Property Type (Checkbox?)</h4>
-                    <h6>Residential</h6>
-                    <h6>Commercial</h6>
-                    <h6>Industrial</h6>
-                    <h6>Agriculture</h6>
-                    <h6>Mixed Use</h6><br/>
-
-                    <h4>Property Type (Checkbox?)</h4>
-                    <h6>Condos</h6>
-                    <h6>Detached</h6>
-                    <h6>Semi-Detached</h6>
-                    <h6>Town House</h6>
-                    <h6>Pre-Construction</h6><br/>
-
-                    <h4>Specific Sector Type (Checkbox?)</h4>
-                    <h6>Investment Properties</h6>
-                    <h6>Luxury Property</h6>
-                    <h6>Foreclosure</h6><br/>
-
-                    <h4>Client Type (Checkbox?)</h4>
-                    <h6>First Time Home Buyer</h6>
-                    <h6>Luxury Buyer/Seller</h6>
-                    <h6>Investor</h6>
-                    <h6>Business Owners</h6><br/>
-                </Text>
-                <br/>
-                <Button title='Save Changes' onPress={()=> router.push('/(tabs)')}/>
-            </View>
+            <Text><h5> - [Placeholder: Agent Degree & Certication]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Agent Degree & Certification
+                - Highest Degree : Drop Down Menu
+                - Certifications :  Drop Down Menu
+                - Field of Study :  Drop Down Menu
+                - Gender :  Drop Down Menu
+            */}
+            <Text><h5> - [Placeholder: Specialized Area]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Specialized Area
+                - Province :  Drop Down Menu
+                - Neighborhood Code :  Drop Down Menu
+                - City :  Drop Down Menu
+                - Neighborhood:  Drop Down Menu
+            */}
+            <Text><h5> - [Placeholder: Agent Transaction History]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Agent Transaction History
+                - Minimum Property Price : Free Text 
+                - Annual Sales $ :  Drop Down Menu with Rangers
+                - Annual Sales Volume: Free Text
+                - Awards : Free Text
+            */}
+            <Text><h5> - [Placeholder: Expertise Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Expertise Type (Button/Radio button/Checklist??)
+                - Invest
+                - Buy
+                - Sell 
+                - Rent
+            */}
+            <Text><h5> - [Placeholder: Specific Property Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Specific Property Type (Button/Radio button/Checklist??)
+                - Residential 
+                - Commercial
+                - Industrial
+                - Agriculture
+                - Mixed Use
+            */}
+            <Text><h5> - [Placeholder: Property Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Property Type (Button/Radio button/Checklist??)
+                - Condos
+                - Detached
+                - Semi-Detached
+                - Town House
+                - Pre-Construction
+            */}
+            <Text><h5> - [Placeholder: Specific Sector Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Specific Sector Type (Button/Radio button/Checklist??)
+                - Investment Properties 
+                - Luxury Properties
+                - Foreclosure
+            */}
+            <Text><h5> - [Placeholder: Client Type]</h5></Text>
+            {/*
+                TODO: This will serve the contents under Client Type (Button/Radio button/Checklist??)
+                - First Time Home Buyer
+                - Luxury Buyer/Seller
+                - Investor
+                - Business Owners
+            */}
+            <br/>
+            <Button title='Edit Profile'/>
+            <Button title='Save Changes' onPress={()=> router.push('/(tabs)')}/>
         </ScrollView>
         
     );
-}
+};
+
+const styles = StyleSheet.create ({
+    sectionTitle:{
+        
+    }
+
+});
