@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, ScrollView, Text} from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -9,7 +9,20 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
   return (
-    <ParallaxScrollView
+    <ScrollView>
+      <Text>
+        <p>Matchmaking page</p>
+      </Text>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  
+});
+
+/*
+<ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
         <IconSymbol
@@ -92,18 +105,21 @@ export default function TabTwoScreen() {
         })}
       </Collapsible>
     </ParallaxScrollView>
-  );
-}
 
-const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
-  titleContainer: {
-    flexDirection: 'row',
-    gap: 8,
-  },
-});
+
+
+
+  const styles = StyleSheet.create({
+    headerImage: {
+      color: '#808080',
+      bottom: -90,
+      left: -35,
+      position: 'absolute',
+    },
+    titleContainer: {
+      flexDirection: 'row',
+      gap: 8,
+    },
+  });
+
+*/
