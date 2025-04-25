@@ -36,7 +36,7 @@ export default function Login(){
                 {/*Login button: navigates to role selection on press (onboarding testing) */}
                 <Button 
                     title='Login' 
-                    onPress={() => router.push('../onboarding/role-selection')}
+                    onPress={() => router.push('../auth/onboarding/role-selection')}
                     color='white'
                     buttonStyle={{
                         backgroundColor: 'rgb(24, 27, 209)', //Blue background 
