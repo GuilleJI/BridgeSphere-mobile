@@ -5,7 +5,7 @@ import  React  from 'react';
 
 export default function Login(){
     // State for Email input 
-    const [text, onChangeText] = React.useState('Placeholder text'); 
+    const [text, onChangeText] = React.useState('Email'); 
     // State for Password input
     const [text2, onChangeText2] = React.useState('Password')
     
