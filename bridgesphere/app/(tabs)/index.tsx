@@ -12,7 +12,7 @@ export default function HomeScreen() {
       {/* hardcoded redirect (pre-Auth Stage) */}
       <Redirect href="/auth/login" />
       <Text>
-        <p>Profile Page</p>
+        Profile Page
       </Text>
     </ScrollView>
   );

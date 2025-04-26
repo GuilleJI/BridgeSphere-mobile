@@ -2,41 +2,54 @@ import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { Button } from '@rneui/themed'; // Import the Button component from the @rneui/themed library for styled UI elements
 import { router } from 'expo-router'; // Import the router object from expo-router for navigation handling
 import  React  from 'react'; 
+import { useAppContext } from '../../context/AppContext'; // grants access to global state and dispatch functions
 
 export default function Login(){
     // State for Email input 
     const [text, onChangeText] = React.useState('Email'); 
     // State for Password input
     const [text2, onChangeText2] = React.useState('Password')
+
+    const { state, dispatch } = useAppContext();
     
     return(
         <View >
-            <h2>BridgeSphere</h2>
-            <h2>Welcome</h2>
-            <h4>Please Login Here</h4>
+            <Text style={styles.title}>BridgeSphere</Text>
+            <Text style={styles.title2}>Welcome</Text>
+            <Text style={styles.title3}>Please Login Here</Text>
 
-            <Text>Email Address</Text>
-            {/* Email input field */}
-            <TextInput
-                style={styles.inputEmail}   // Apply Email input styling (basic)
-                onChangeText={onChangeText} // Update state when text changes 
-                value={text}                // Displat current password state
-            />
             
-            <Text>Password</Text>
-            {/* Password input field */}
-            <TextInput
-                style={styles.inputPassword} // Apply password input styling (basic)
-                onChangeText={onChangeText2} // Update state when text changes
-                value={text2}                // Display current password state 
-            />
+
+            <View style={styles.Credentials}>
+                <Text>Email Address</Text>
+                {/* Email input field */}
+                <TextInput
+                    style={styles.inputEmail}   // Apply Email input styling (basic)
+                    onChangeText={onChangeText} // Update state when text changes 
+                    value={text}                // Displat current password state
+                />
+            
+                <Text>Password</Text>
+                {/* Password input field */}
+                <TextInput
+                    style={styles.inputPassword} // Apply password input styling (basic)
+                    onChangeText={onChangeText2} // Update state when text changes
+                    value={text2}                // Display current password state 
+                    secureTextEntry={true}
+                />
+            </View>
             
             {/* Buttons container */}
             <View style={styles.buttonsContainer}>
                 {/*Login button: navigates to role selection on press (onboarding testing) */}
                 <Button 
                     title='Login' 
-                    onPress={() => router.push('../auth/onboarding/role-selection')}
+                    //  onPress={() => router.push('../auth/onboarding/role-selection')}
+                    onPress={() => {
+                        dispatch({ type: "LOGIN"});
+                        console.log("User logged in!");
+                        router.replace("/auth/onboarding/role-selection")
+                    }}
                     color='white'
                     buttonStyle={{
                         backgroundColor: 'rgb(24, 27, 209)', //Blue background 
@@ -65,6 +78,7 @@ export default function Login(){
 
                     }}
                 />
+                <Text>Is Authenticated: {state.is_authenticated ? "YES" : "NO"}</Text>
             </View>       
         </View>
         
@@ -75,7 +89,8 @@ const styles = StyleSheet.create ({
     // Style for the email input field 
     inputEmail:{
         height: 40,                 // Set Height
-        margin: 12,                 // Outer spacing 
+        marginTop: 10,                 // Outer spacing 
+        marginBottom: 10,
         width: 350,                 // Fixed width
         borderWidth: 2,             // Border thickness
         padding: 10,                // Inner Spacing 
@@ -84,7 +99,7 @@ const styles = StyleSheet.create ({
     // Style for the password input
     inputPassword:{
         height: 40,                  
-        margin: 12,                  
+        marginTop: 10,              
         width: 350,                 
         borderWidth: 2,             
         padding: 10,                
@@ -97,5 +112,26 @@ const styles = StyleSheet.create ({
         width: '100%',              //Border thickness
         marginVertical: 20          //Inner spacing
 
+    },
+    title:{
+        fontSize: 50,
+        paddingLeft: 15,
+        paddingTop: 20,
+        paddingBottom: 10
+    },
+    title2:{
+        fontSize: 25,
+        paddingLeft: 15,
+        paddingBottom: 10
+        
+    },
+    title3:{
+        fontSize: 15,
+        paddingLeft: 15,
+        paddingBottom: 10
+    }, 
+    Credentials:{
+        justifyContent: 'center',
+        padding:15
     }
 }); 

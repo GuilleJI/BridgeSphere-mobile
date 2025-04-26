@@ -11,7 +11,7 @@ export default function TabTwoScreen() {
   return (
     <ScrollView>
       <Text>
-        <p>Matchmaking page</p>
+        Matchmaking page
       </Text>
     </ScrollView>
   );
