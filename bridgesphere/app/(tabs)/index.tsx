@@ -5,12 +5,22 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
+import { useAppContext } from '../../context/AppContext'; 
+
 export default function HomeScreen() {
+
+  const { state } = useAppContext(); 
+
+  if (!state.is_authenticated){
+    return <Redirect href='/auth/login'/>;
+  }
+  if(!state.onboarding_complete){
+    return <Redirect href='/auth/onboarding/role-selection' />;
+  }
+
   return (
     
     <ScrollView>
-      {/* hardcoded redirect (pre-Auth Stage) */}
-      <Redirect href="/auth/login" />
       <Text>
         Profile Page
       </Text>

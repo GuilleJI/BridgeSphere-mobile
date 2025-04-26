@@ -1,7 +1,13 @@
 import { View, Text, Button, ScrollView, StyleSheet, TextInput } from 'react-native'; 
 import { router } from 'expo-router';
+import { useAppContext } from '../../../context/AppContext';
 
 export default function ClientOnboarding(){
+    const { dispatch } = useAppContext(); 
+    const handleSave = () => {
+        dispatch({type: "COMPLETE_ONBOARDING"}); // Mark onboarding as complete
+        router.replace("/(tabs)"); // Send user to the main app tabs 
+    }
     return(
         <ScrollView>
             {/* Section 1: Profile */}
@@ -94,7 +100,7 @@ export default function ClientOnboarding(){
             */}
             <br/>
             <Button title='Edit Profile'/>
-            <Button title='Save Changes' onPress={()=> router.push('/(tabs)')}/>
+            <Button title='Save Changes' onPress={ handleSave }/>
         </ScrollView>
         
     );
