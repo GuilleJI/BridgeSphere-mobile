@@ -1,5 +1,7 @@
 import { Image, StyleSheet, Platform, View, Text, ScrollView} from 'react-native';
+import { Button } from '@rneui/themed'; 
 import { Redirect } from "expo-router";
+import { router } from 'expo-router'; 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -9,7 +11,7 @@ import { useAppContext } from '../../context/AppContext';
 
 export default function HomeScreen() {
 
-  const { state } = useAppContext(); 
+  const { state, dispatch } = useAppContext(); 
 
   if (!state.is_authenticated){
     return <Redirect href='/auth/login'/>;
@@ -21,15 +23,28 @@ export default function HomeScreen() {
   return (
     
     <ScrollView>
-      <Text>
-        Profile Page
-      </Text>
+      <View style={styles.pageLayout}>
+        <Text>
+          Profile Page
+        </Text>
+      </View>
+      <Button
+        title='logout'
+        onPress={() => {
+          dispatch({ type: "LOGOUT"});
+          console.log("User Logged out!");
+          router.replace("/auth/login"); 
+        }}
+      />
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  
+    pageLayout:{
+      marginTop: 25, 
+      padding: 20
+    }
 });
 
 /*

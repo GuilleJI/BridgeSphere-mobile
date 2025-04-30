@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform, ScrollView, Text} from 'react-native';
+import { StyleSheet, Image, Platform, ScrollView, Text, View} from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -10,14 +10,20 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 export default function TabTwoScreen() {
   return (
     <ScrollView>
-      <Text>
-        Matchmaking page
-      </Text>
+      <View style={styles.pageLayout}>
+        <Text>
+          Matchmaking page
+        </Text>
+      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  pageLayout:{
+    marginTop: 25, 
+    padding: 20
+  }
   
 });
 
