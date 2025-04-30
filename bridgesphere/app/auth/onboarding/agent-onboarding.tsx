@@ -2,8 +2,6 @@ import { View, Text, Button, ScrollView, StyleSheet, TextInput} from 'react-nati
 import { router } from 'expo-router';
 import { useAppContext } from '../../../context/AppContext'; 
 
-
-
 export default function AgentOnboarding(){
     const { dispatch } = useAppContext(); 
     const handleSave = () => {
