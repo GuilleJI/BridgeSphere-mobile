@@ -9,7 +9,7 @@ export default function Login(){
     const [text, onChangeText] = React.useState('Email'); 
     // State for Password input
     const [text2, onChangeText2] = React.useState('Password')
-
+    
     const { state, dispatch } = useAppContext();
     
     return(
