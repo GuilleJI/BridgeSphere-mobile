@@ -12,27 +12,37 @@ export default function BrokerageOnboarding(){
     return (
         <ScrollView>
             {/* Section 1: Upload Video*/}
-            <Text style={styles.sectionTitle}><h3>1. Upload Video</h3></Text>
-            <TextInput placeholder="Upload Video"/>{/* Uploading video functionality needed */}
-            <br/>
+            <Text style={styles.sectionTitle}>1. Upload Video</Text>
+            {/* Uploading video functionality needed */}
+            <TextInput placeholder="Upload Video"/>
+            
             {/* Section 2: Profile (Full Name + Upload photo)*/}
-            <Text style={styles.sectionTitle}><h3>2. Brokerage Full Name + Upload photo</h3></Text>
-            <TextInput placeholder="Brokerage Full Name"/>{/* Text Input */}
-            <Text>[Upload Photo Placeholder]</Text>{/* Uploading photo functionality needed */}
-            <br/>
+            <Text style={styles.sectionTitle}>2. Brokerage Full Name + Upload photo</Text>
+            {/* Text Input */}
+            <TextInput placeholder="Brokerage Full Name"/>
+            {/* Uploading photo functionality needed */}
+            <Text>Upload Photo Placeholder</Text>
+            
             {/* Section 3: Brokerage Basic Information */}
-            <Text style={styles.sectionTitle}><h3>3. Brokerage Information</h3></Text>
-            <TextInput placeholder="Email"/> {/* Free Text */}
-            <TextInput placeholder="Phone Number"/> {/* Free Text */}
-            <TextInput placeholder="Address"/> {/* Free Text */}
-            <TextInput placeholder="Established In"/> {/* Calendar with Month and Year */}
-            <TextInput placeholder="Social"/> {/* Links */}
-            <TextInput placeholder="Language Proficiency"/> {/* Free Text */}
-            <TextInput placeholder="Website"/> {/* Free Text */}
-            <br/>
+            <Text style={styles.sectionTitle}>3. Brokerage Information</Text>
+            {/* Free Text */}
+            <TextInput placeholder="Email"/> 
+            {/* Free Text */}
+            <TextInput placeholder="Phone Number"/> 
+            {/* Free Text */}
+            <TextInput placeholder="Address"/> 
+            {/* Calendar with Month and Year */}
+            <TextInput placeholder="Established In"/> 
+            {/* Links */}
+            <TextInput placeholder="Social"/> 
+            {/* Free Text */}
+            <TextInput placeholder="Language Proficiency"/> 
+            {/* Free Text */}
+            <TextInput placeholder="Website"/> 
+            
             {/* Section 4: Brokerage Professional Information */}
-            <Text style={styles.sectionTitle}><h3>4. Brokerage Professional Information</h3></Text>
-            <Text><h5> - [Placeholder: Specialized Area]</h5></Text>
+            <Text style={styles.sectionTitle}>4. Brokerage Professional Information</Text>
+            <Text>Placeholder: Specialized Area</Text>
             {/*
                 TODO: This will serve the contents under Specialized Area for future development (Button/Radio button/Checklist??)
                 - Province : ON
@@ -40,7 +50,7 @@ export default function BrokerageOnboarding(){
                 - Neighborhood Code : Free Text
                 - Neighborhood: Drop Down Menu
             */}
-            <Text><h5> - [Placeholder: Brokerage Program]</h5></Text>
+            <Text>Placeholder: Brokerage Program</Text>
             {/*
                 TODO: This will serve the contents under Brokerage Program (Button/Radio button/Checklist??)
                 - New Agent Mentorship
@@ -52,7 +62,7 @@ export default function BrokerageOnboarding(){
                 - Franchise Model Support 
                 - Virtual Brokerage Model
             */}
-            <Text><h5> - [Placeholder: Business Model]</h5></Text>
+            <Text>Placeholder: Business Model</Text>
             {/*
                 TODO: This will serve the contents under Business Model (Button/Radio button/Checklist??)
                 - Traditional Brick-and-Mortar
@@ -62,7 +72,7 @@ export default function BrokerageOnboarding(){
                 - Franchise-Based
                 - Independence Boutique Brokerage 
             */}
-            <Text><h5> - [Placeholder: Key Services Offered]</h5></Text>
+            <Text>Placeholder: Key Services Offered</Text>
             {/*
                 TODO: This will serve the contents under Key Services Offered (Button/Radio button/Checklist??)
                 - MLS Access & Listing Support
@@ -74,7 +84,7 @@ export default function BrokerageOnboarding(){
                 - Property Management Services
                 - Relocation & Concierge Services
             */}
-            <Text><h5> - [Placeholder: Technology Tools]</h5></Text>
+            <Text>Placeholder: Technology Tools</Text>
             {/*
                 TODO: This will serve the contents under Technology Tools (Button/Radio button/Checklist??)
                 - CRM & Client Management Software
@@ -84,7 +94,7 @@ export default function BrokerageOnboarding(){
                 - Mobile-Friendly Agent Dashboard
                 - Transaction & Compliance Tracking
             */}
-            <Text><h5> - [Placeholder: Agent Support & Training]</h5></Text>
+            <Text>Placeholder: Agent Support & Training</Text>
             {/*
                 TODO: This will serve the contents under Agent Support & Training (Button/Radio button/Checklist??)
                 - Weekly Coaching & Webinars
@@ -95,7 +105,7 @@ export default function BrokerageOnboarding(){
                 - AI & Digital Marketing Training 
                 - Networking & Industry Events
             */}
-            <Text><h5> - [Placeholder: Referral Programs]</h5></Text>
+            <Text>Placeholder: Referral Programs</Text>
             {/*
                 TODO: This will serve the contents under Referral Programs (Button/Radio button)
                 - Yes, Commission-Based Referral Program
@@ -103,7 +113,7 @@ export default function BrokerageOnboarding(){
                 - Yes, Tiered Incentive Program 
                 - No, We Do Not Offer Referral Programs
             */}
-            <Text><h5> - [Placeholder: Commission Structure]</h5></Text>
+            <Text>Placeholder: Commission Structure</Text>
             {/*
                 TODO: This will serve the contents under Commission Structure (Button/Radio button/Checklist??)
                 - 100% Commission (Flat Monthly Fee)
@@ -113,7 +123,7 @@ export default function BrokerageOnboarding(){
                 - Revenue Share Model 
                 - Custom Negotiable Structure
             */}
-            <Text><h5> - [Placeholder: Marketing Channels]</h5></Text>
+            <Text>Placeholder: Marketing Channels</Text>
             {/*
                 TODO: This will serve the contents under Marketing Channels (Button/Radio button/Checklist??)
                 - Paid Digital Advertising (Google, Facebook, Instagram)
@@ -124,7 +134,7 @@ export default function BrokerageOnboarding(){
                 - Custom Branding & Design Support 
                 - Personal Agent Website Creation 
             */}
-            <Text><h5> - [Placeholder: Recruitment Preferences]</h5></Text>
+            <Text>Placeholder: Recruitment Preferences</Text>
             {/*
                 TODO: This will serve the contents under Recruitment Preferences (Button/Radio button/Checklist??)
                 - New Agents (0-1 Years Experience)
@@ -135,7 +145,7 @@ export default function BrokerageOnboarding(){
                 - Commercial Real Estate Experts
                 - Niche Market Specialists (e.g., investment, relocation, rentals)
             */}
-            <Text><h5> - [Placeholder: Recruitment Preferences (Typo?)]</h5></Text>
+            <Text>Placeholder: Recruitment Preferences (Typo?)</Text>
             {/*
                 TODO: This will serve the contents under Recruitment Preferences (Button/Radio button/Checklist??)
                 - No Desk Fee
@@ -145,39 +155,47 @@ export default function BrokerageOnboarding(){
                 - Hybrid Model (Combination of Monthly & Transaction Fee)
                 - Negotiable Desk Fee
             */}
-            <br/>
+            
             {/* Section 5: What Sets Us Apart (multilined Text)*/}
-            <Text style={styles.sectionTitle}><h3>5. What Sets Us Apart</h3></Text>
+            <Text style={styles.sectionTitle}>5. What Sets Us Apart</Text>
             <TextInput placeholder="[Multiline input goes here]"/>
-            <br/>
+            
             {/* Section 6: Brokerage Listings*/}
-            <Text style={styles.sectionTitle}><h3>6. Brokerage Listings</h3></Text>
-            <Text>[placeholder: Upload Photo]</Text>{/* Adding photo upload functionality Required */}
-            <TextInput placeholder="Listing Price"/>{/* Text Input */}
-            <TextInput placeholder="Agent Name"/>{/* Text Input */}
-            <TextInput placeholder="Listing Address"/>{/* Text Input */}
-            <TextInput placeholder="#Beds"/>{/* Text Input */}
-            <TextInput placeholder="#Bath"/>{/* Text Input */}
-            <TextInput placeholder="#sqft"/>{/* Text Input */}
-            <Text>[Placeholder: Sale or Rent button]</Text>
-            <Text>[Placeholder: Add Button '(+)']</Text> {/* Add new Card with the content above functionality*/}
-            <br/>
+            <Text style={styles.sectionTitle}>6. Brokerage Listings</Text>
+            {/* Adding photo upload functionality Required */}
+            <Text>placeholder: Upload Photo</Text>
+            {/* Text Input */}
+            <TextInput placeholder="Listing Price"/>
+            {/* Text Input */}
+            <TextInput placeholder="Agent Name"/>
+            {/* Text Input */}
+            <TextInput placeholder="Listing Address"/>
+            {/* Text Input */}
+            <TextInput placeholder="#Beds"/>
+            {/* Text Input */}
+            <TextInput placeholder="#Bath"/>
+            {/* Text Input */}
+            <TextInput placeholder="#sqft"/>
+            <Text>Placeholder: Sale or Rent button</Text>
+            {/* Add new Card with the content above functionality*/}
+            <Text>Placeholder: Add Button '(+)'</Text> 
+            
             {/* Section 7: Choose the Perfect Plan for your Brokerage */}
             <Text style={styles.sectionTitle}>
-                <h3>7. Choose the Perfect Plan for Your Brokerage</h3>
-                <h4>Scale your Team, enhance recruitment, and access advanced analytics with our tailored subscription options.</h4>
+                7. Choose the Perfect Plan for Your Brokerage
+                Scale your Team, enhance recruitment, and access advanced analytics with our tailored subscription options.
             </Text>
             {/* TODO: Each card should have the perks per each plan, followed by a selection button which ideally would activate the plan during onboarding process */}
-            <Text>[Basic Plan]</Text>
-            <Text>[Professional Plan]</Text>
-            <Text>[Elite Plan]</Text>
-            <br/>
+            <Text>Basic Plan</Text>
+            <Text>Professional Plan</Text>
+            <Text>Elite Plan</Text>
+            
             {/* TODO: Button functionality seems to be to edit out a chosen plan */}
-            <Text>[ Edit Subscription Button ]</Text>
-            <br/>
+            <Text> Edit Subscription Button </Text>
+            
             {/* Section 8: ??? (Cropped out) */}
-            <Text style={styles.sectionTitle}><h3>8. ??? Unclear</h3></Text>
-            <Text><h5> - [Placeholder: ???]</h5></Text>
+            <Text style={styles.sectionTitle}>8. ??? Unclear</Text>
+            <Text> Placeholder: ???</Text>
             {/*
                 TODO: This will serve the contents under [????] 
                 - Minimum Property Price $ : Free Text
@@ -185,7 +203,7 @@ export default function BrokerageOnboarding(){
                 - Annual Sales Volume : Free Text
                 - Awards : Free Text
             */}
-            <Text><h5> - [Placeholder: Expertise Type]</h5></Text>
+            <Text>Placeholder: Expertise Type</Text>
             {/*
                 TODO: This will serve the contents under Expertise Type (Button/Radio button/Checklist??)
                 - Invest 
@@ -193,7 +211,7 @@ export default function BrokerageOnboarding(){
                 - Sell
                 - Rent
             */}
-            <Text><h5> - [Placeholder: Specific Property Type]</h5></Text>
+            <Text>Placeholder: Specific Property Type</Text>
             {/*
                 TODO: This will serve the contents under Specific Property Type (Button/Radio button/Checklist??)
                 - Residential 
@@ -202,7 +220,7 @@ export default function BrokerageOnboarding(){
                 - Agriculture 
                 - Mixed Use
             */}
-            <Text><h5> - [Placeholder: Property Type]</h5></Text>
+            <Text>Placeholder: Property Type</Text>
             {/*
                 TODO: This will serve the contents under Property Type (Button/Radio button/Checklist??)
                 - Condos
@@ -211,14 +229,14 @@ export default function BrokerageOnboarding(){
                 - Town House 
                 - Pre-Construction 
             */}
-            <Text><h5> - [Placeholder: Specific Sector Type]</h5></Text>
+            <Text>Placeholder: Specific Sector Type</Text>
             {/*
                 TODO: This will serve the contents under Specific Sector Type (Button/Radio button/Checklist??)
                 - Investment Properties
                 - Luxury Properties
                 - Foreclosure 
             */}
-            <Text><h5> - [Placeholder: Client Type]</h5></Text>
+            <Text>Placeholder: Client Type</Text>
             {/*
                 TODO: This will serve the contents under Client Type (Button/Radio button/Checklist??)
                 - First Time Home Buyer 
@@ -226,7 +244,7 @@ export default function BrokerageOnboarding(){
                 - Investor
                 - Business Owners
             */}
-            <Text><h5> - [Placeholder: Degree & Certifications]</h5></Text>
+            <Text>Placeholder: Degree & Certifications</Text>
             {/*
                 TODO: This will serve the contents under Degree & Certifications
                 - Highest Degree : Drop Down Menu
@@ -234,8 +252,8 @@ export default function BrokerageOnboarding(){
                 - Certifications : Drop Down Menu
                 - Gender : Drop Down Menu 
             */}
-            <br/>
-            <Button title='Edit Profile' />
+            
+            {/* <Button title='Edit Profile' /> */}
             <Button title='Save Changes' onPress={handleSave} />
         </ScrollView>
         );
