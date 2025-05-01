@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     View:{
         margin: 10,
         flex: 1,
-        marginTop: 40
+        marginTop: 80
     },
     title: {
         fontSize: 20,
