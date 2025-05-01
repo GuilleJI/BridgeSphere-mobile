@@ -115,7 +115,7 @@ const styles = StyleSheet.create ({
     },
     // Rafactoring Login component layout
     pageLayout :{
-        marginTop: 80
+        marginTop: 70
     },
     title:{
         fontSize: 50,
