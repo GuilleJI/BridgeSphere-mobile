@@ -9,11 +9,11 @@ export default function Login(){
     const [text, onChangeText] = React.useState('Email'); 
     // State for Password input
     const [text2, onChangeText2] = React.useState('Password')
-    
+
     const { state, dispatch } = useAppContext();
     
     return(
-        <View >
+        <View style={styles.pageLayout}>
             <Text style={styles.title}>BridgeSphere</Text>
             <Text style={styles.title2}>Welcome</Text>
             <Text style={styles.title3}>Please Login Here</Text>
@@ -111,7 +111,11 @@ const styles = StyleSheet.create ({
         alignItems: 'center',       //Fixed Width
         width: '100%',              //Border thickness
         marginVertical: 20          //Inner spacing
-
+    
+    },
+    // Rafactoring Login component layout
+    pageLayout :{
+        marginTop: 80
     },
     title:{
         fontSize: 50,
