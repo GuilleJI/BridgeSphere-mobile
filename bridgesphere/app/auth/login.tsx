@@ -45,11 +45,11 @@ export default function Login(){
                 <Button 
                     title='Login' 
                     //  onPress={() => router.push('../auth/onboarding/role-selection')}
-                    onPress={() => {
-                        dispatch({ type: "LOGIN"});
-                        console.log("User logged in!");
-                        router.replace("/auth/onboarding/role-selection")
-                    }}
+                    // onPress={() => {
+                    //     dispatch({ type: "LOGIN"});
+                    //     console.log("User logged in!");
+                    //     router.replace("/auth/onboarding/role-selection")
+                    // }}
                     color='white'
                     buttonStyle={{
                         backgroundColor: 'rgb(24, 27, 209)', //Blue background 
@@ -67,6 +67,11 @@ export default function Login(){
                 {/* Sign Up button */}
                 <Button 
                     title='Sign Up'
+                    onPress={() => {
+                        dispatch({ type: "LOGIN"});
+                        console.log("User is signing up!"); 
+                        router.replace("/auth/onboarding/role-selection")
+                    }}
                     buttonStyle={{
                         borderRadius: 10 // Rounded corners
                     }}
@@ -75,7 +80,6 @@ export default function Login(){
                         marginHorizontal: 50,
                         height: 50, 
                         width: 350,
-
                     }}
                 />
                 <Text>Is Authenticated: {state.is_authenticated ? "YES" : "NO"}</Text>

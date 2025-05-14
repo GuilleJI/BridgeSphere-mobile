@@ -7,6 +7,7 @@ import { useEffect} from 'react';
 import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { AppProvider } from "../context/AppContext";
+// Wrapper to enable gesture handling (required by react-native-gesture-handler)
 import { GestureHandlerRootView } from 'react-native-gesture-handler'; 
 
 
@@ -33,12 +34,16 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1}}>
       <AppProvider>
         <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
-          
-            <Slot/>
-          
-          
-          
-            {/* 
+          <Slot/>
+          <StatusBar style="auto" />
+        </ThemeProvider>
+      </AppProvider>
+    </GestureHandlerRootView>
+  );
+}
+
+
+{/* 
               Stack Navigation:
               All screens below have their headers disabled to allow for full custom UI control.
               This is especially important during onboarding and login, where headers may clutter the design.
@@ -52,9 +57,3 @@ export default function RootLayout() {
                 <Stack.Screen name="+not-found" />
               </Stack>
             */}
-          <StatusBar style="auto" />
-        </ThemeProvider>
-      </AppProvider>
-    </GestureHandlerRootView>
-  );
-}

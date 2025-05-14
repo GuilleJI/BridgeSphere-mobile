@@ -1,32 +1,92 @@
 import { View, Text, Button, ScrollView, StyleSheet, TextInput } from 'react-native'; 
 import { router } from 'expo-router';
 import { useAppContext } from '../../../context/AppContext';
+import { Picker } from '@react-native-picker/picker'; //importing picker 
+import  React, {useState } from 'react' // importing usestate to allow us to obtain a state variable
 
 export default function ClientOnboarding(){
     const { dispatch } = useAppContext(); 
+    
+    //Wiring logic to local state:  
+        const [formData, setFormData] = useState({
+        full_name: '',
+        email: '',
+        phone: '',
+        address: '', 
+        language: '', 
+    });
+
     const handleSave = () => {
+        //Adding simple validation inside handleSave()...If neither of the following formdata properies are filled out, the app will alert the user to fill them out before saving...
+        if(!formData.full_name || !formData.email || !formData.phone){
+            alert("please fill out the required fields!");
+            return;
+        }
         dispatch({type: "COMPLETE_ONBOARDING"}); // Mark onboarding as complete
         router.replace("/(tabs)"); // Send user to the main app tabs 
     }
+
     return(
         <ScrollView>
             <View style={styles.pageLayout}>
+
                 {/* Section 1: Profile */}
                 <Text style={styles.sectionTitle}>Profile</Text>
-                <TextInput placeholder="Client Full Name"/>
+                <TextInput 
+                //wiring up client name 
+                    placeholder="Client Full Name"
+                    value={formData.full_name}
+                    onChangeText={(text) => setFormData({ ...formData, full_name: text})}
+                />
                 <Text>[Upload Photo Placeholder]</Text>
                 
+
                 {/* Section 2: Basic Info */}
                 <Text style={styles.sectionTitle}>Basic Information</Text>
+
                 {/* Free Text */}
-                <TextInput placeholder="Email"/>
+                <TextInput   
+                    placeholder="Email"
+                    // wiring up email address
+                    value={formData.email}
+                    onChangeText={(text) => setFormData({...formData, email: text})}
+                />
+
                 {/* Free Text*/}
-                <TextInput placeholder="Phone Number"/>
+                <TextInput 
+                    placeholder="Phone Number"
+                    //wiring up phone number
+                    value={formData.phone}
+                    onChangeText={(text) => setFormData({...formData, phone: text})}
+                />
+
                 {/* Free Text */}
-                <TextInput placeholder="Address"/>
-                {/* Drop Down Menu */}
-                <TextInput placeholder="Language Proficiency"/>
+                <TextInput 
+                    placeholder="Address"
+                    //wiring up address
+                    value={formData.address}
+                    onChangeText={(text) => setFormData({...formData, address: text})}
                 
+                />
+                
+                {/* Drop Down Menu */}
+                <Text style={styles.language}>Language Proficiency</Text>
+                <Picker
+                    selectedValue={formData.language}
+                    onValueChange={(itemValue) => 
+                        setFormData({ ...formData, language: itemValue })
+                    }>
+                    <Picker.Item label="Select Language" value=""/>
+                    <Picker.Item label="English" value="English"/>
+                    <Picker.Item label="Spanish" value="Spanish"/>
+                    <Picker.Item label="Farsi" value="Farsi"/>
+                    <Picker.Item label="Mandarin" value="Mandarin"/>
+                </Picker>
+                
+
+
+
+
                 {/* Section 3: My Ideal Agent */}
                 <Text style={styles.sectionTitle}>My ideal Agent</Text>
                 <Text>[Placeholder: Basic Information]</Text>
@@ -119,6 +179,9 @@ const styles = StyleSheet.create ({
     pageLayout: { 
         padding: 20,
         marginTop: 25
+    }, 
+    language:{
+        marginTop: 12
     }
 
 });
