@@ -38,7 +38,7 @@ export default function ClientOnboarding(){
                     value={formData.full_name}
                     onChangeText={(text) => setFormData({ ...formData, full_name: text})}
                 />
-                <Text>[Upload Photo Placeholder]</Text>
+                <Text >[Upload Photo Placeholder]</Text>
                 
 
                 {/* Section 2: Basic Info */}
@@ -72,6 +72,7 @@ export default function ClientOnboarding(){
                 {/* Drop Down Menu */}
                 <Text style={styles.language}>Language Proficiency</Text>
                 <Picker
+                    style={{marginTop: 5, marginBottom:10}}
                     selectedValue={formData.language}
                     onValueChange={(itemValue) => 
                         setFormData({ ...formData, language: itemValue })
@@ -89,7 +90,7 @@ export default function ClientOnboarding(){
 
                 {/* Section 3: My Ideal Agent */}
                 <Text style={styles.sectionTitle}>My ideal Agent</Text>
-                <Text>[Placeholder: Basic Information]</Text>
+                <Text style={{ fontWeight: 'semibold'}}>[Basic Information]</Text>
                 {/*
                     TODO: This will serve the contents under Basic Information  
                     - Gender : Drop Down Menu
@@ -97,8 +98,31 @@ export default function ClientOnboarding(){
                     - Brokerage: Drop Down Menu
                     - Language Proficiency: Drop Down Menu
                 */}
+                <Text style={styles.gender}>Gender: </Text>
+                <Picker>
 
-                <Text>[Placeholder: Agent Degree & Certication]</Text>
+                </Picker>
+
+                <Text style={styles.availability}>Availability: </Text>
+                <Picker>
+
+                </Picker>
+
+                <Text style={styles.Brokerage}>Brokerage: </Text>
+                <Picker> 
+
+                </Picker>
+
+                <Text style={styles.language}>Language Proficiency: </Text>
+                <Picker>
+
+                </Picker>
+
+
+
+
+
+                <Text style={{ fontWeight: 'semibold'}}>[Degree & Certication]</Text>
                 {/*
                     TODO: This will serve the contents under Agent Degree & Certification
                     - Highest Degree : Drop Down Menu
@@ -106,7 +130,17 @@ export default function ClientOnboarding(){
                     - Field of Study :  Drop Down Menu
                     - Gender :  Drop Down Menu
                 */}
-                <Text>[Placeholder: Specialized Area]</Text>
+                <Text style={styles.Degree}>Highest Degree: </Text>
+                <Picker></Picker>
+                <Text style={styles.Certifications}>Certifications: </Text>
+                <Picker></Picker>
+                <Text style={styles.Field}>Field of Study: </Text>
+                <Picker></Picker>
+                <Text style={styles.gender}>Gender: </Text>
+                <Picker></Picker>
+                
+
+                <Text style={{ fontWeight: 'semibold'}}>[Specialized Area]</Text>
                 {/*
                     TODO: This will serve the contents under Specialized Area
                     - Province :  Drop Down Menu
@@ -114,7 +148,19 @@ export default function ClientOnboarding(){
                     - City :  Drop Down Menu
                     - Neighborhood:  Drop Down Menu
                 */}
-                <Text>[Placeholder: Agent Transaction History]</Text>
+                <Text>Province: </Text>
+                <Picker></Picker>
+
+                <Text>Neighborhood Code: </Text>
+                <Picker></Picker>
+
+                <Text>City: </Text>
+                <Picker></Picker>
+
+                <Text>Neighborhood: </Text>
+                <Picker></Picker>
+
+                <Text style={{ fontWeight: 'semibold'}}>[Agent Transaction History]</Text>
                 {/*
                     TODO: This will serve the contents under Agent Transaction History
                     - Minimum Property Price : Free Text 
@@ -122,7 +168,22 @@ export default function ClientOnboarding(){
                     - Annual Sales Volume: Free Text
                     - Awards : Free Text
                 */}
-                <Text>[Placeholder: Expertise Type]</Text>
+                <TextInput
+                    placeholder="Minimum Property Price"
+                />
+                <TextInput
+                    placeholder="Annual Sales $: Will Turn into Drop Down Meny with Rangers"
+                />
+                <TextInput
+                    placeholder="Annual Sales Volume"
+                />
+                <TextInput
+                    placeholder="Awards"
+                />
+
+                
+
+                <Text style={{ fontWeight: 'semibold'}}>[Expertise Type]</Text>
                 {/*
                     TODO: This will serve the contents under Expertise Type (Button/Radio button/Checklist??)
                     - Invest
@@ -130,7 +191,7 @@ export default function ClientOnboarding(){
                     - Sell 
                     - Rent
                 */}
-                <Text>[Placeholder: Specific Property Type]</Text>
+                <Text style={{ fontWeight: 'semibold'}}>[Specific Property Type]</Text>
                 {/*
                     TODO: This will serve the contents under Specific Property Type (Button/Radio button/Checklist??)
                     - Residential 
@@ -139,7 +200,7 @@ export default function ClientOnboarding(){
                     - Agriculture
                     - Mixed Use
                 */}
-                <Text>[Placeholder: Property Type]</Text>
+                <Text style={{ fontWeight: 'semibold'}}>[Property Type]</Text>
                 {/*
                     TODO: This will serve the contents under Property Type (Button/Radio button/Checklist??)
                     - Condos
@@ -148,14 +209,14 @@ export default function ClientOnboarding(){
                     - Town House
                     - Pre-Construction
                 */}
-                <Text>[Placeholder: Specific Sector Type]</Text>
+                <Text style={{ fontWeight: 'semibold'}}>[Specific Sector Type]</Text>
                 {/*
                     TODO: This will serve the contents under Specific Sector Type (Button/Radio button/Checklist??)
                     - Investment Properties 
                     - Luxury Properties
                     - Foreclosure
                 */}
-                <Text>[Placeholder: Client Type]</Text>
+                <Text style={{ fontWeight: 'semibold'}}>[Client Type]</Text>
                 {/*
                     TODO: This will serve the contents under Client Type (Button/Radio button/Checklist??)
                     - First Time Home Buyer
@@ -174,14 +235,33 @@ export default function ClientOnboarding(){
 
 const styles = StyleSheet.create ({
     sectionTitle:{
-        fontSize: 18
+        fontSize: 18,
+        fontWeight: 'bold'
     },
     pageLayout: { 
         padding: 20,
         marginTop: 25
     }, 
     language:{
-        marginTop: 12
+        marginTop: 5
+    },
+    gender: {
+
+    },
+    availability:{
+
+    },
+    Brokerage: {
+
+    },
+    Degree: {
+
+    }, 
+    Certifications: {
+
+    }, 
+    Field: {
+
     }
 
 });
